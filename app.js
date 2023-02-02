@@ -1,8 +1,8 @@
 let searchBar = document.getElementById("search-bar");
-
+var myKey = keys.myApi;
 
 const weather = {
-  apiKey: keys.myApi,
+  apiKey: myKey,
 
   fetchWeather: function (city) {
     fetch(

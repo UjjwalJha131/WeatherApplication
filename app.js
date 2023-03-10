@@ -4,7 +4,7 @@ var myKey = keys.myApi;
 const weather = {
   apiKey: myKey,
 
-  fetchWeather: function (city) {
+  fetchWeather: function(city) {
     fetch(
       "https://api.openweathermap.org/data/2.5/weather?q=" +
         city +
@@ -37,8 +37,6 @@ const weather = {
       "Wind speed is " + speed + " km/h";
 
       document.querySelector(".weather").classList.remove("loading");
-
-      /*document.body.style.backgroundImage = "url('https://source.unsplash.com/1600x900/?" + name + "')"*/
   },
 
   

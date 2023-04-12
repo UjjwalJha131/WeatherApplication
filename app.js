@@ -20,8 +20,9 @@ const weather = {
     const { icon, description } = data.weather[0];
     const { temp, humidity } = data.main;
     const { speed } = data.wind;
+    const { country } = data.sys;
 
-    document.getElementById("city").innerText = "Weather in " + name;
+    document.getElementById("city").innerText = "Weather in " + name + " , " + country;
 
     document.getElementById("icon").src =
       "https://openweathermap.org/img/wn/" + icon + "@2x.png";
@@ -31,10 +32,10 @@ const weather = {
     document.getElementById("temp").innerText = temp + "°C";
 
     document.getElementById("humidity").innerText =
-      "Humidity is " + humidity + " %";
+      "Humidity = " + humidity + " %";
 
     document.getElementById("wind").innerText =
-      "Wind speed is " + speed + " km/h";
+      "Wind speed = " + speed + " km/h";
 
       document.querySelector(".weather").classList.remove("loading");
   },

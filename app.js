@@ -1,8 +1,7 @@
 let searchBar = document.getElementById("search-bar");
-var myKey = keys.myApi;
 
 const weather = {
-  apiKey: myKey,
+  apiKey: "7880f7604815c7b8ccc2b953fd5c704c",
 
   fetchWeather: function(city) {
     fetch(
@@ -16,12 +15,13 @@ const weather = {
   },
 
   displayWeather: function (data) {
-    const { name } = data;
+    const { name} = data;
+    const { country} = data.sys;
     const { icon, description } = data.weather[0];
     const { temp, humidity } = data.main;
     const { speed } = data.wind;
 
-    document.getElementById("city").innerText = "Weather in " + name;
+    document.getElementById("city").innerText = "Weather in " + name+ ", " + country;
 
     document.getElementById("icon").src =
       "https://openweathermap.org/img/wn/" + icon + "@2x.png";

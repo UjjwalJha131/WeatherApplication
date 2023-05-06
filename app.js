@@ -56,4 +56,4 @@ searchBar.addEventListener("keyup" , (event)=> {
     }
 });
 
-weather.fetchWeather("Goa")
+weather.fetchWeather("New Delhi")
